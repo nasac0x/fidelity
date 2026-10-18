@@ -163,7 +163,12 @@ const BLOCKS = {
           el('a', { class: 'btn btn-primary', href: '#contact' }, [txt(pick(C.hero.cta))]),
           el('a', { class: 'btn btn-ghost', href: '#features' }, [txt(pick(C.hero.secondary))]),
         ]),
-        el('ul', { class: 'hero-proof' }, [0, 1, 2].map((i) => el('li', {}, [txt(`${round(between(2, 9), 0) * 100}+`), el('span', {}, [txt(locale.startsWith('pt') ? 'equipes ativas' : 'active teams')])]))),
+        el('ul', { class: 'hero-proof' }, (locale.startsWith('pt')
+        ? ['equipes ativas', 'projetos entregues', 'países atendidos']
+        : ['active teams', 'projects shipped', 'countries']).map((label, i) => el('li', {}, [
+        txt(`${i === 2 ? round(between(2, 9), 0) * 10 : round(between(2, 9), 0) * 100}+`),
+        el('span', {}, [txt(label)]),
+      ]))),
       ]),
       el('div', { class: 'hero-art' }, [el('img', { src: assetRef('hero-art'), alt: '', width: '960', height: '576', loading: 'eager' })]),
     ]),
