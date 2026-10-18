@@ -1,0 +1,25 @@
+{
+  "name": "fidelity-skill",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Pixel-faithful design cloning and spec-driven site generation for coding agents",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "syntax": "node syntax.mjs",
+    "serve": "node serve.mjs --root . --port 4173",
+    "pitfalls": "node pitfalls.mjs list"
+  },
+  "dependencies": {
+    "@tesseract.js-data/eng": "^1.0.0",
+    "@tesseract.js-data/por": "^1.0.0",
+    "axe-core": "^4.14.0",
+    "jimp": "^1.6.1",
+    "odiff-bin": "^4.5.0",
+    "pixelmatch": "^8.0.0",
+    "playwright": "^1.64.1",
+    "tesseract.js": "^7.0.0"
+  }
+}

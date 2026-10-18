@@ -1,0 +1,20 @@
+# deps
+node_modules/
+npm-debug.log*
+
+# run artifacts (keep the scripts, ignore their output)
+runs/**/out/
+runs/**/*.png
+import/
+report/
+visual-report/
+budgets/
+judge/*.png
+
+# editors / OS
+.DS_Store
+Thumbs.db
+*.swp
+
+# local credentials (never commit)
+.fidelity.json
